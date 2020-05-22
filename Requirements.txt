@@ -1,0 +1,10 @@
+We need to install below:
+
+Django
+django-filter
+djangorestframework
+numpy
+pandas
+pi==0.1.2
+python-dateutil
+
