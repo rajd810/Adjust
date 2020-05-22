@@ -1,4 +1,7 @@
-We need to install below:
+
+
+
+We need to install below packages:
 
 Django
 django-filter
