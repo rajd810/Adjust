@@ -6,15 +6,21 @@ from rest_framework import serializers
 # Field thats going to used in admin database.
 
 class Webapp(models.Model):
-	date = models.DateField(auto_now=False,auto_now_add=False)
+	date = models.DateField(
+		verbose_name = "Date"
+	)
 	channel = models.CharField(max_length = 100)
 	country = models.CharField(max_length = 100)
 	os = models.CharField(max_length = 100)
-	impressions = models.CharField(max_length = 100)
-	clicks = models.CharField(max_length = 100)
-	installs = models.CharField(max_length = 100)
-	spend = models.CharField(max_length = 100)
-	revenue = models.CharField(max_length = 100)
+	impressions = models.PositiveIntegerField()
+	clicks = models.PositiveIntegerField()
+	installs = models.PositiveIntegerField()
+	spend = models.PositiveIntegerField()
+	revenue = models.PositiveIntegerField()
+
+	class Meta:
+		verbose_name = "Webapp"
+		verbose_name_plural = "Webapp"
 
 	def __str__(self):
 		return self.channel
